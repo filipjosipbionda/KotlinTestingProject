@@ -10,13 +10,8 @@ class Team(
     var totalGold: Long = 0,
     var baronKills: Int = 0,
     var drakeKills: Int = 0,
-    var elderDrakeKills: Int = 0,
     var towersDestroyed: Int = 0
 ) {
-    fun captureElderDrake() {
-        elderDrakeKills++
-        addGold(500)
-    }
     fun captureBaron() {
         baronKills++
         addGold(300)
