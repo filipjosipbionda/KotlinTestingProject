@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm") version "1.9.23"
 }
 
-group = "org.example"
+group = "com.project.kotlinTestingProject"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -14,8 +14,14 @@ dependencies {
 }
 
 tasks.test {
-    useJUnitPlatform()
+        useJUnitPlatform()
+
+        reports {
+            html.required.set(true)
+            junitXml.required.set(true)
+        }
 }
+
 kotlin {
     jvmToolchain(20)
 }
